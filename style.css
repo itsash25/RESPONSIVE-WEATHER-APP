@@ -1,0 +1,136 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 6%;
+  background-image: linear-gradient(to bottom, rgba(108, 104, 104, 0.75), rgba(15, 13, 13, 0.75)), url('images/w_img.jpeg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.container {
+  width: 440px;
+  border: 2px solid rgb(160, 143, 143);
+  border-radius: 20px;
+  background: linear-gradient(#C6EA8D, #FE90AF);
+  box-shadow: 12px;
+  overflow: hidden; /* Add overflow property to prevent horizontal scrolling on smaller screens */
+}
+
+.search-box {
+  height: 28px;
+  margin-top: 8px;
+}
+
+.search-box button {
+  margin-left: 2px;
+  padding-left: 5px;
+  width: 29px;
+  height: 27px;
+  margin-left: 7px;
+  cursor: pointer;
+  padding-left: 4px;
+  color: black;
+  border-radius: 15px;
+}
+
+.search-box input {
+  width: 85%;
+  text-align: center;
+  height: 30px;
+  padding-left: 12px;
+  margin-left: 5px;
+  border: none;
+  box-shadow: none;
+  border-radius: 20px;
+}
+
+.weather {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin-top: 15px;
+}
+
+.weather h1 {
+  font-size: 60px;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.863);
+}
+
+.weather h2 {
+  font-size: 40px;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.863);
+}
+
+.weather-icon {
+  width: 150px;
+  height: 150px;
+  margin-top: 30px;
+}
+
+.details {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
+  margin-top: 50px;
+}
+
+.col {
+  width: 100px;
+  padding: 22px 55px;
+  display: flex;
+  align-items: center;
+  text-align: left;
+  font-size: 16px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: 400;
+  color: #fff;
+}
+
+.col img {
+  width: 40px;
+  margin-right: 5px;
+}
+
+.wind {
+  width: 100px;
+}
+
+/* Styles for smaller screens (e.g., tablets and mobile devices) */
+@media (max-width: 768px) {
+  .container {
+      width: 90%; /* Make the container full width on smaller screens */
+      max-width: 400px; /* Limit the maximum width */
+  }
+
+  .search-box input {
+      width: 100%; /* Make the input field full width on smaller screens */
+      max-width: none; /* Remove the maximum width */
+  }
+
+  .weather {
+      width: 100%; /* Make the weather information section full width on smaller screens */
+  }
+
+  .details {
+      flex-direction: column; /* Stack details vertically on smaller screens */
+      align-items: center;
+  }
+
+  .col {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 10px;
+  }
+}
